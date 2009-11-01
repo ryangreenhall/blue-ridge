@@ -1,37 +1,20 @@
-Blue Ridge JavaScript Testing Rails Plugin
+BlueRidge4Duke
 ==========================================
 
-The Blue Ridge JavaScript Testing Rails Plugin adds support for command-line and in-browser JavaScript unit tests to your Rails app.  It bundles several great tools together in a convention-over-configuration, Rails-like way.  These tools include:
+BlueRidge4Duke allows Screw.Unit specifications to be executed both from the command-line (using Ant) or within a web browser.
+
+This project has been forked from [Blue Ridge JavaScript Testing Rails Plugin](http://github.com/relevance/blue-ridge) to remove the
+dependency on Ruby and Rails so that it can be used for Java projects using Ant.
+
+It bundles the following great tools together:
 
 * `Rhino` - a Java-based JavaScript interpreter
 * `Screw.Unit` - a behaviour-driven development syntax for JavaScript similar to RSpec
 * `Smoke` - a JavaScript mocking & stubbing library similar to Mocha
 * `env.js` - a DOM implementation written entirely in JavaScript
 
-Please join our [mailing list](http://groups.google.com/group/blueridgejs) if you're interested in Blue Ridge!  Also, check out if our build is broken (it'd better NOT be!) on [RunCodeRun](http://runcoderun.com/relevance/blue-ridge).
-
 Installing and Running
 ----------------------
-
-To install:
-
-    ./script/plugin install git://github.com/relevance/blue-ridge.git
-    ./script/generate blue_ridge
-  
-To run all of the specs:
-
-    rake test:javascripts
-  
-(Hint: You can also use the `spec:javascripts` or `examples:javascripts` aliases.)
-  
-To run an individual spec file called "application_spec.js":
-
-    rake test:javascripts TEST=application
-    
-To generate and run a spec for a JavaScript file called "public/javascripts/graphics.js" run:
-
-    ./script/generate javascript_spec graphics
-    rake test:javascripts TEST=graphics
 
 To run your spec inside a web browser, load the `HTML fixture` associated with the spec. (See below for more information on HTML fixtures and in-browser testing).
 
