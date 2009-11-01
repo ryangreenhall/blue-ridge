@@ -11,4 +11,16 @@
             </fileset>
         </apply>
     </target>
+
+    <target name="examples">
+        <apply executable="java" failonerror="true" relative="false" parallel="false">
+            <arg value="-jar"/>
+            <arg value="-Dblue.ridge.prefix=${basedir}"/>
+            <arg value="vendor/env-js.jar"/>
+            <arg value="lib/test_runner.js"/>
+            <fileset dir="examples/spec">
+                <include name="**/*spec.js"/>
+            </fileset>
+        </apply>
+    </target>
 </project>
