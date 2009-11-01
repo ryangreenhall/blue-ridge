@@ -1,0 +1,14 @@
+<project name="blueridge4duke" basedir="." default="screw-unit">
+
+    <target name="screw-unit">
+        <apply executable="java" failonerror="true" relative="false" parallel="false">
+            <arg value="-jar"/>
+            <arg value="-Dblue.ridge.prefix=${basedir}"/>
+            <arg value="vendor/env-js.jar"/>
+            <arg value="lib/test_runner.js"/>
+            <fileset dir="spec">
+                <include name="**/*spec*.js"/>
+            </fileset>
+        </apply>
+    </target>
+</project>
