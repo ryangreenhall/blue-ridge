@@ -7,7 +7,7 @@
             <arg value="vendor/env-js.jar"/>
             <arg value="lib/test_runner.js"/>
             <fileset dir="spec">
-                <include name="**/*spec*.js"/>
+                <include name="**/*spec.js"/>
             </fileset>
         </apply>
     </target>
