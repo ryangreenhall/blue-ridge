@@ -15,15 +15,15 @@
         </sequential>
     </macrodef>
 
-    <target name="screw-unit">
+    <target name="screw-unit" description="Executes the blue ridge specs.">
         <execute.specs src="spec"/>
     </target>
 
-    <target name="examples">
+    <target name="examples" description="Executes the specs in the example directory.">
         <execute.specs src="examples/spec"/>
     </target>
 
-    <target name="rhino-shell">
+    <target name="rhino-shell" description="Starts an irb style Javascript shell.">
         <exec executable="java" >
             <arg value="-jar"/>
             <arg value="-Dblue.ridge.prefix=${basedir}"/>
