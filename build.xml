@@ -11,7 +11,7 @@
                 <arg value="-jar"/>
                 <arg value="-Dblue.ridge.prefix=${blue.ridge.prefix}"/>
                 <arg value="${blue.ridge.dependencies}/env-js.jar"/>
-                <arg value="${blue.ridge.lib}/test_runner.js"/>
+                <arg value="${blue.ridge.lib}/spec.runner.js"/>
                 <fileset dir="@{src}">
                     <include name="**/*spec.js"/>
                 </fileset>

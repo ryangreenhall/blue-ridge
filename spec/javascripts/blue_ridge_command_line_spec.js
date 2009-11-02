@@ -1,5 +1,5 @@
 require("spec_helper.js");
-require("../../lib/test_runner.js");
+require("../../lib/spec.runner.js");
 
 //TODO: get Smoke to where I can just stub all the assigmnents to BlueRidge.CommandLine.specFile below.
 Screw.Unit(function() {
