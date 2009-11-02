@@ -22,4 +22,17 @@
     <target name="examples">
         <execute.specs src="examples/spec"/>
     </target>
+
+    <target name="rhino-shell">
+        <exec executable="java" >
+            <arg value="-jar"/>
+            <arg value="-Dblue.ridge.prefix=${basedir}"/>
+            <arg value="vendor/env-js.jar"/>
+            <arg value="-f"/>
+            <arg value="${basedir}/lib/shell.js"/>    
+            <arg value="-f"/>
+            <arg value="-"/>    
+        </exec>
+    </target>
+
 </project>
