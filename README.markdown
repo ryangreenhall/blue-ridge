@@ -4,7 +4,7 @@ BlueRidge4Duke
 BlueRidge4Duke allows Screw.Unit specifications to be executed both from the command-line (using Ant) or within a web browser.
 
 This project has been forked from [Blue Ridge JavaScript Testing Rails Plugin](http://github.com/relevance/blue-ridge) to remove the
-dependency on Ruby and Rails so that it can be used for Java projects using Ant.
+dependency on Ruby and Rails so that it can be used within a Java project using Ant.
 
 It bundles the following great tools together:
 
