@@ -1,13 +1,17 @@
 <project name="blueridge4duke" basedir="." default="screw-unit">
 
+    <property name="blue.ridge.prefix" value="${basedir}"/>
+    <property name="blue.ridge.lib" value="${basedir}/lib"/>
+    <property name="blue.ridge.dependencies" value="${basedir}/vendor"/>
+
     <macrodef name="execute.specs">
         <attribute name="src"/>
         <sequential>
             <apply executable="java" failonerror="true" relative="false" parallel="false">
                 <arg value="-jar"/>
-                <arg value="-Dblue.ridge.prefix=${basedir}"/>
-                <arg value="vendor/env-js.jar"/>
-                <arg value="lib/test_runner.js"/>
+                <arg value="-Dblue.ridge.prefix=${blue.ridge.prefix}"/>
+                <arg value="${blue.ridge.dependencies}/env-js.jar"/>
+                <arg value="${blue.ridge.lib}/test_runner.js"/>
                 <fileset dir="@{src}">
                     <include name="**/*spec.js"/>
                 </fileset>
@@ -24,14 +28,14 @@
     </target>
 
     <target name="rhino-shell" description="Starts an irb style Javascript shell.">
-        <exec executable="java" >
+        <exec executable="java">
             <arg value="-jar"/>
-            <arg value="-Dblue.ridge.prefix=${basedir}"/>
-            <arg value="vendor/env-js.jar"/>
+            <arg value="-Dblue.ridge.prefix=${blue.ridge.prefix}"/>
+            <arg value="${blue.ridge.dependencies}/env-js.jar"/>
             <arg value="-f"/>
-            <arg value="${basedir}/lib/shell.js"/>    
+            <arg value="${blue.ridge.lib}/shell.js"/>    
             <arg value="-f"/>
-            <arg value="-"/>    
+            <arg value="-"/>
         </exec>
     </target>
 
